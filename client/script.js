@@ -79,7 +79,3 @@ if (loginForm) {
         .catch(err => console.error('Error:', err));
     });
 }
-
-
-
-// Hai
