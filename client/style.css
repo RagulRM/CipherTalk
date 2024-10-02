@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.homepage {
+    margin-top: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: #0400ff;
+    font-size: 20px;
+}
