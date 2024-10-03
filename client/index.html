@@ -7,25 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Chat Platform</h1>
-<!-- Registration Form -->
-<form id="registerForm">
-    <input type="text" id="registerUsername" placeholder="Username" required />
-    <input type="password" id="registerPassword" placeholder="Password" required />
-    <input type="password" id="registerPasskey" placeholder="Passkey" required />
-    <button type="submit">Register</button>
-</form>
+    <h1 id="pageTitle">Welcome to the Chat Platform</h1>
 
-<!-- Login Form -->
-<form id="loginForm">
-    <input type="text" id="loginUsername" placeholder="Username" required />
-    <input type="password" id="loginPassword" placeholder="Password" required />
-    <button type="submit">Login</button>
-</form>
+    <img id="titleImage" src="resources/image.jpg" alt="Chat Platform Image" />
+    <!-- Buttons for Register and Login -->
+    <div class="button-container">
+        <button id="registerButton" class="button">Register</button>
+        <button id="loginButton" class="button">Login</button>
+    </div>
 
-    
- 
-     <!-- Include the JavaScript file -->
-     <script src="script.js"></script>
+    <!-- Registration Form (Initially hidden) -->
+    <form id="registerForm" class="form-container" style="display: none;">
+        <input type="text" id="registerUsername" placeholder="Username" required class="input-field" />
+        <input type="password" id="registerPassword" placeholder="Password" required class="input-field" />
+        <input type="password" id="registerPasskey" placeholder="Passkey" required class="input-field" />
+        <button type="submit" class="button">Register</button>
+        <button id="goBackRegister" class="button go-back-button">Go back</button>
+    </form>
+
+    <!-- Login Form (Initially hidden) -->
+    <form id="loginForm" class="form-container" style="display: none;">
+        <input type="text" id="loginUsername" placeholder="Username" required class="input-field" />
+        <input type="password" id="loginPassword" placeholder="Password" required class="input-field" />
+        <button type="submit" class="button">Login</button>
+        <button id="goBackLogin" class="button go-back-button">Go back</button>
+    </form>
+
+    <!-- Warning Modal -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <p>Remember your passkey for decrypting the message.</p>
+            <div class="modal-buttons">
+                <button id="changeButton" class="modal-button">Change</button>
+                <button id="okayButton" class="modal-button">Okay</button>
+            </div>
+        </div>
+    </div>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>You have successfully registered</p>
+            <button id="continueLoginButton" class="button">Continue to Login</button>
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
